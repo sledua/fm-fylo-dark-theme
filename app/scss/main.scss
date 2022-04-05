@@ -1,0 +1,22 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+// - Mobile: 375px
+// - Desktop: 1440px
+// - Font size: 14px
+
+::placeholder {
+	color: #666;
+}
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+:root {
+	font-size: $base_size;
+}
+h1,h2,h3,h4,h5,h6,p {
+  font-weight: 400;
+}
+
+@import "media";

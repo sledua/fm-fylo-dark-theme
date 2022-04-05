@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "OpenSans-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/OpenSans/OpenSans-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "OpenSans-Bold";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../fonts/OpenSans/OpenSans-Bold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Raleway-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Raleway/Raleway-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Raleway-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Raleway/Raleway-Bold.ttf") format("ttf");
+}
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: orange;
+  color: #fff;
+}
+
+:root {
+  font-size: 10px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: 400;
+}
