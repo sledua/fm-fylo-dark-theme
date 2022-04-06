@@ -31,10 +31,103 @@
   color: #fff;
 }
 
+:focus-visible {
+  outline-offset: 0;
+  outline: none;
+}
+
 :root {
   font-size: 10px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
   font-weight: 400;
+}
+
+body {
+  font-size: 1.4rem;
+  color: hsl(0deg, 0%, 100%);
+  font-family: "OpenSans-Regular", sans-serif;
+  background-color: hsl(218deg, 28%, 13%);
+  overflow-x: hidden;
+  margin: 0;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  grid-template-areas: "header" "content" "footer";
+}
+
+body img, body picutre {
+  max-width: 100%;
+  display: block;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: content;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.grid {
+  display: inline-grid;
+}
+
+.container {
+  max-width: 144rem;
+  padding: 0 7rem;
+}
+.container--header {
+  grid-template-columns: minmax(0, 20rem) minmax(1rem, 1fr);
+  grid-auto-rows: 10rem;
+}
+.container--header > :first-child {
+  align-self: end;
+}
+.container--header > nav {
+  align-self: end;
+  justify-self: end;
+}
+.container--header > nav > ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.container--header > nav > ul > :last-child > a {
+  margin-right: 0;
+}
+.container--header > nav > ul > li {
+  padding-bottom: 0.8rem;
+}
+.container--header > nav > ul > li > a {
+  text-decoration: none;
+  color: #bfbfbf;
+  margin-right: 4.5rem;
+  font-size: 1.7rem;
+  transition: color 400ms linear;
+}
+.container--header > nav > ul > li > a:hover, .container--header > nav > ul > li > a:focus {
+  color: hsl(0deg, 0%, 100%);
+}
+
+@media (max-width: 37rem) {
+  .container {
+    padding: 0 3rem;
+  }
+  .container--header {
+    grid-template-columns: minmax(0, 10rem) minmax(1rem, 1fr);
+    grid-auto-rows: 6rem;
+  }
+  .container--header > nav > ul > li {
+    padding-bottom: 0.5rem;
+  }
+  .container--header > nav > ul > li > a {
+    margin-right: 3rem;
+    font-size: 1.4rem;
+  }
 }
