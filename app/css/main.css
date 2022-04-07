@@ -100,6 +100,7 @@ footer {
 .container--header {
   grid-template-columns: minmax(0, 20rem) minmax(1rem, 1fr);
   grid-auto-rows: 10rem;
+  max-width: 100%;
 }
 .container--header > :first-child {
   align-self: end;
@@ -143,7 +144,7 @@ footer {
 .one::after {
   content: "";
   background-image: url(../../img/bg-curvy-desktop.svg);
-  height: 29rem;
+  height: 28rem;
   max-width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -188,6 +189,58 @@ footer {
   color: hsl(0deg, 0%, 100%);
   background: #2e3192;
   background: linear-gradient(to right, hsl(176deg, 68%, 64%) 1%, hsl(198deg, 60%, 50%) 100%);
+}
+
+.two {
+  margin-top: 1px;
+  grid-template-columns: repeat(2, minmax(0, 55rem));
+  grid-template-rows: repeat(2, minmax(0, 19rem));
+  gap: 6rem 0rem;
+  justify-content: center;
+}
+.two > div {
+  justify-items: center;
+  align-items: start;
+  text-align: center;
+}
+.two > div > picture {
+  padding-bottom: 0.8rem;
+}
+.two > div > p {
+  color: #bfbfbf;
+  margin-top: -0.5rem;
+  max-width: 33rem;
+  font-size: 1.3rem;
+}
+
+.three {
+  grid-template-columns: repeat(2, minmax(0, 55rem));
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.three > picture {
+  max-width: 95%;
+}
+.three > article h2 {
+  font-size: 3.2rem;
+  padding-bottom: 2.8rem;
+}
+.three > article p {
+  color: #bfbfbf;
+  padding-bottom: 1.4rem;
+  max-width: 54rem;
+  font-size: 1.6rem;
+}
+.three > article p + p {
+  padding-bottom: 2.8rem;
+}
+.three > article a {
+  color: hsl(176deg, 68%, 64%);
+  text-decoration: none;
+  border-bottom: 1px solid hsl(176deg, 68%, 64%);
+  display: inline-block;
+  padding-bottom: 4px;
 }
 
 @media (max-width: 37rem) {
