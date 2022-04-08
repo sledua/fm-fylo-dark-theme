@@ -73,7 +73,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-rows: min-content 1fr;
-  grid-template-areas: "header" "content" "footer";
+  grid-template-areas: "header" "intro" "content" "sub" "footer";
 }
 
 header {
@@ -83,10 +83,6 @@ header {
 
 main {
   grid-area: content;
-}
-
-footer {
-  grid-area: footer;
 }
 
 .grid {
@@ -133,21 +129,21 @@ footer {
 }
 .container--main {
   max-width: 100%;
-  background-color: hsl(217deg, 28%, 15%);
+  background-color: hsl(218deg, 28%, 13%);
 }
 
 .one {
+  grid-area: intro;
   grid-template-areas: "image" "content";
   grid-template-rows: minmax(0, 45rem) minmax(0, 34rem);
   position: relative;
 }
 .one::after {
   content: "";
-  background-image: url(../../img/bg-curvy-desktop.svg);
-  height: 28rem;
+  background: url(../../img/bg-curvy-desktop.svg) no-repeat center top;
+  height: 27rem;
   max-width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: 100% 100%;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -241,6 +237,72 @@ footer {
   border-bottom: 1px solid hsl(176deg, 68%, 64%);
   display: inline-block;
   padding-bottom: 4px;
+}
+
+.four {
+  grid-template-columns: repeat(3, minmax(0, 35rem));
+  grid-template-rows: 17rem;
+  justify-content: center;
+  gap: 4rem;
+}
+.four > article {
+  display: grid;
+  justify-content: space-between;
+  background-color: hsl(217deg, 28%, 15%);
+  padding: 3.5rem 2.5rem 1.3rem;
+}
+.four > article > p {
+  font-size: 1.2rem;
+}
+.four > article > .grid--thumbs {
+  width: 100%;
+  grid-template-columns: 3rem 1fr;
+  align-items: center;
+  gap: 0.75rem;
+}
+.four > article > .grid--thumbs > .thumb {
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.four > article > .grid--thumbs > .thumb > img {
+  height: 100%;
+  margin: 0 auto;
+}
+.four > article > .grid--thumbs > .info > h4 {
+  font-size: 1.2rem;
+  font-family: "Raleway-Bold", sans-serif;
+  margin: 0;
+  padding-bottom: 0.35rem;
+}
+.four > article > .grid--thumbs > .info > p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #bfbfbf;
+}
+
+.subscribe {
+  justify-content: center;
+  margin-bottom: -5rem;
+  z-index: 3;
+}
+.subscribe .ower {
+  grid-area: sub;
+  justify-items: center;
+  align-items: center;
+  z-index: 3;
+  max-width: 86rem;
+  height: 26rem;
+  background-color: hsl(219deg, 30%, 18%);
+  z-index: 2;
+}
+
+.container--footer {
+  grid-area: footer;
+  z-index: 2;
+  background-color: hsl(216deg, 53%, 9%);
+  max-width: 100%;
 }
 
 @media (max-width: 37rem) {

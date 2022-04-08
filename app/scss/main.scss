@@ -30,7 +30,9 @@ body {
 	grid-template-rows: min-content 1fr;
 	grid-template-areas: 
 	'header'
+	'intro'
 	'content'
+	'sub'
 	'footer';
 }
 header {
@@ -40,9 +42,7 @@ header {
 main {
 	grid-area: content;
 }
-footer {
-	grid-area: footer;
-}
+
 .grid {
 	display: inline-grid;
 }
@@ -85,10 +85,11 @@ footer {
 	}
 	&--main {
 		max-width: 100%;
-		background-color: $intro_bg;
+		background-color: $main_bg;
 	}
 }
 .one {
+	grid-area: intro;
 	grid-template-areas: 
 	'image'
 	'content';
@@ -96,11 +97,10 @@ footer {
 	position: relative;
 	&::after {
 		content: "";
-    background-image: url(../../img/bg-curvy-desktop.svg);
-    height: 28rem;
+    background: url(../../img/bg-curvy-desktop.svg) no-repeat center top;
+    height: 27rem;
     max-width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: 100% 100%;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -195,5 +195,74 @@ footer {
 			padding-bottom: 4px;
 		}
 	}
+}
+.four {
+	grid-template-columns: (repeat(3, minmax(0,35rem)));
+	grid-template-rows: 17rem;
+	justify-content: center;
+	gap: 4rem;
+	> article {
+		display: grid;
+		justify-content: space-between;
+		background-color: $intro_bg;
+		padding: 3.5rem 2.5rem 1.3rem;
+		> p {
+			font-size: 1.2rem;
+		}
+		> .grid {
+			&--thumbs {
+				width: 100%;
+				grid-template-columns: 3rem 1fr;
+				align-items: center;
+				gap: 0.75rem;
+				> .thumb {
+					width: 3rem;
+					height: 3rem;
+					overflow: hidden;
+					border-radius: 50%;
+					> img {
+						height: 100%;
+						margin: 0 auto;
+					}
+				}
+				> .info {
+					> h4 {
+						font-size: 1.2rem;
+						font-family: $raleway-Bold;
+						margin: 0;
+						padding-bottom: 0.35rem;
+					}
+					> p {
+						font-size: 1rem;
+						line-height: 1.4;
+						color: darken($white, 25%)
+					}
+				}
+			}
+		}
+	}
+}
+.subscribe {
+	justify-content: center;
+	margin-bottom: -5rem;
+	z-index: 3;
+	.ower{
+		grid-area: sub;
+		
+		justify-items: center;
+		align-items: center;
+		z-index: 3;
+		max-width: 86rem;
+		height: 26rem;
+		background-color: $testimonials_bg;
+		z-index: 2;
+	}
+	
+}
+.container--footer {
+	grid-area: footer;
+	z-index: 2;
+	background-color: $footer_bg;
+	max-width: 100%;
 }
 @import "media";
