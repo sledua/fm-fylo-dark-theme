@@ -293,9 +293,44 @@ main {
   align-items: center;
   z-index: 3;
   max-width: 86rem;
-  height: 26rem;
+  height: 20rem;
   background-color: hsl(219deg, 30%, 18%);
   z-index: 2;
+}
+.subscribe .ower > h2 {
+  font-weight: bold;
+  align-self: end;
+  font-size: 2.7rem;
+}
+.subscribe .ower > p {
+  padding: 0 15rem;
+  font-size: 1.3rem;
+  text-align: center;
+  line-height: 1.6;
+}
+.subscribe .ower > form {
+  align-self: start;
+  outline: 1px solid green;
+}
+.subscribe .ower > form > input {
+  padding: 1.4rem 2.2rem;
+  border-radius: 3em;
+  margin-right: 2rem;
+  min-width: 48rem;
+}
+.subscribe .ower > form > input::placeholder {
+  color: #ced6e3;
+  font-size: 1.1em;
+}
+.subscribe .ower > form > button {
+  cursor: pointer;
+  padding: 1.4rem 2.2rem;
+  border-radius: 3em;
+  box-shadow: none;
+  border: none;
+  color: hsl(0deg, 0%, 100%);
+  background: #2e3192;
+  background: linear-gradient(to right, hsl(176deg, 68%, 64%) 1%, hsl(198deg, 60%, 50%) 100%);
 }
 
 .container--footer {
