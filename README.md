@@ -6,7 +6,7 @@ This is a solution to the [fm-fylo-dark-theme](https://www.frontendmentor.io/cha
 ### Links
 
 - Solution URL: [Repo](https://github.com/sledua/fm-fylo-dark-theme)
-- Live Site URL: [Live GH-pages](https://sledua.github.io/readme-post/huddle_lp.html)
+- Live Site URL: [Live GH-pages](https://sledua.github.io/fm-fylo-dark-theme/)
 ### Built with
 
 - Semantic HTML5 markup
