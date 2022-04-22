@@ -40,7 +40,7 @@ function watchApp(cb) {
 function browserSync(cb) {
 	sync.init({
 		server: {
-			baseDir: "dist/"
+			baseDir: "app/"
 		},
 		notify: false,
 		online: true,
