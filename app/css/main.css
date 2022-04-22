@@ -10553,6 +10553,11 @@ main {
   margin-right: 0;
 }
 
+@media (max-width: 130rem) {
+  .container--footer {
+    padding: 2rem 5rem 0;
+  }
+}
 @media (max-width: 37rem) {
   .container {
     padding: 0 3rem;
